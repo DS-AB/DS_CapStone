@@ -81,7 +81,7 @@ def scatter(entered_site,payload):
     # thought reusing filtered_df may cause issues, but tried it out of curiosity and it seems to be working fine
     
     if entered_site=='ALL':
-        fig=px.scatter(filtered_df,x='Payload Mass (kg)',y='class',color='Booster Version Category',title='Success count on Payload mass for all sites')
+        fig=px.scatter(filtered_df,x='Payload Mass (kg)',y='class',color='Booster Version Category',title='Correlation between Payload and Success for all Sites')
         return fig
     else:
         fig=px.scatter(filtered_df[filtered_df['Launch Site']==entered_site],x='Payload Mass (kg)',y='class',color='Booster Version Category',title=f"Success count on Payload mass for site {entered_site}")
